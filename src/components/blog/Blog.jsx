@@ -22,6 +22,27 @@ const callouts = [
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
+  {
+    name: 'Travel',
+    description: 'Daily commute essentials',
+    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    href: '#',
+  },
+  {
+    name: 'Travel',
+    description: 'Daily commute essentials',
+    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    href: '#',
+  },
+  {
+    name: 'Travel',
+    description: 'Daily commute essentials',
+    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    href: '#',
+  },
 ]
 
 const Blog = () => {
@@ -31,7 +52,7 @@ const Blog = () => {
         <div className="mx-auto max-w-2xl py-10 sm:py-16 lg:max-w-none lg:py-20">
           <h2 className="text-3xl font-bold">Top Stories</h2>
 
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-8 lg:gap-x-6">
             {callouts.map((callout) => (
               <div key={callout.name} className="group relative">
                 <img
@@ -50,6 +71,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
+        
       </div>
     </div>
   )

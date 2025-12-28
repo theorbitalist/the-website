@@ -1,4 +1,16 @@
-.hero-h1{
-    font-size: 150px;
-    font-family: var(--bebas);
+.hero-h1 {
+  font-family: var(--bebas);
+  font-size: 150px;
+}
+
+@media (max-width: 1024px) {
+  .hero-h1 {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-h1 {
+    font-size: 95px;
+  }
 }

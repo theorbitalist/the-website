@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import img1 from '../../assets/logo.png'
-import { useNavigate } from "react-router-dom";
 
 import {
   Dialog,
@@ -16,200 +14,118 @@ import {
 } from "@headlessui/react";
 
 import {
-  ArrowPathIcon,
   Bars3Icon,
+  XMarkIcon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
-  XMarkIcon,
+  ArrowPathIcon,
 } from "@heroicons/react/24/outline";
 
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-// import supabase from "../../helper/supabaseClient";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
+  { name: "Analytics", description: "Get a better understanding of your traffic", href: "#", icon: ChartPieIcon },
+  { name: "Engagement", description: "Speak directly to your customers", href: "#", icon: CursorArrowRaysIcon },
+  { name: "Security", description: "Your customers’ data will be safe", href: "#", icon: FingerPrintIcon },
+  { name: "Integrations", description: "Connect with third-party tools", href: "#", icon: SquaresPlusIcon },
+  { name: "Automations", description: "Build strategic funnels", href: "#", icon: ArrowPathIcon },
 ];
 
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
+const links = [
+  "Features",
+  "Rocket",
+  "Astronomy",
+  "Moon",
+  "Marketplace",
+  "Company",
 ];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // const navigate = useNavigate();
-  // const signOut = async () => {
-  //   const {error} = await supabase.auth.signOut();
-  //   navigate("/");
-  // }
 
   return (
-    <header className="border-b border-b-(--white) navbar-link-text">
-      <nav
-        aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between h-20 p-2 lg:px-8 bg-(--grey) navbar-link-text"
-      >
-        {/* Logo */}
-        {/* <div className="flex lg:flex-1">
-          <a href="#" className="navbar-logo-text">
-            <span className="text-(--red) navbar-logo-text">Orbitalist</span>
-          </a>
-        </div> */}
+    <header className="border-b border-(--white) bg-(--grey)">
+      <nav className="relative mx-auto flex h-20 max-w-7xl items-center px-4 lg:px-8">
 
-        {/* Mobile menu button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="size-6" />
-          </button>
-        </div>
-
-        {/* Desktop menu */}
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12 navbar-link-text">
+        {/* Desktop Centered Menu */}
+        <PopoverGroup className="hidden lg:flex z-20 absolute left-1/2 -translate-x-1/2 items-center gap-x-10 whitespace-nowrap">
+          
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-base font-semibold text-white">
+            <PopoverButton className="flex items-center gap-1 text-base font-semibold text-(--white)">
               Product
-              <ChevronDownIcon className="size-5" />
+              <ChevronDownIcon className="h-5 w-5" />
             </PopoverButton>
 
-            <PopoverPanel
-              transition
-              className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 overflow-hidden rounded-3xl bg-(--grey) outline outline-(--white) transition data-closed:translate-y-1 data-closed:opacity-0"
-            >
-              <div className="p-4">
+            <PopoverPanel className="absolute left-1/2 z-20 mt-3 w-[360px] -translate-x-1/2 rounded-2xl bg-(--grey) outline outline-(--white)">
+              <div className="p-3">
                 {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 hover:bg-(--less-white) transition"
-                  >
-                    <div className="flex size-11 items-center justify-center rounded-lg bg-(--grey)">
-                      <item.icon className="size-6 text-white transition" />
-                    </div>
-
-                    <div className="flex-auto">
-                      <a
-                        href={item.href}
-                        className="block font-semibold text-white group-hover:text-(--grey) transition"
-                      >
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-
-                      <small className="mt-1 text-(--less-white) group-hover:text-(--grey) transition">
-                        {item.description}
-                      </small>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* <div className="grid grid-cols-2 divide-x border-t-(--white) border-t divide-(--white) bg-(--grey)">
-                {callsToAction.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-white hover:bg-(--less-white) hover:text-(--grey)"
+                    className="group flex items-start gap-4 rounded-lg p-4 transition hover:bg-(--less-white)"
                   >
-                    <item.icon className="size-5" />
-                    {item.name}
+                    <item.icon className="h-6 w-6 text-(--white) group-hover:text-(--grey)" />
+                    <div>
+                      <p className="font-semibold text-(--white) group-hover:text-(--grey)">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-(--less-white) group-hover:text-(--grey)">
+                        {item.description}
+                      </p>
+                    </div>
                   </a>
                 ))}
-              </div> */}
+              </div>
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-base font-semibold text-white">
-            Features
-          </a>
-          <a href="#" className="text-base font-semibold text-white">
-            Marketplace
-          </a>
-          <a href="#" className="text-base font-semibold text-white">
-            Company
-          </a>
+          {links.map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="text-base font-semibold text-(--white)"
+            >
+              {item}
+            </a>
+          ))}
         </PopoverGroup>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a className="text-base font-semibold text-white cursor-pointer">
-            Instagram →
-          </a>
+        {/* Mobile Menu Button */}
+        <div className="ml-auto lg:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="p-2 text-(--white)"
+          >
+            <Bars3Icon className="h-6 w-6" />
+          </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      <Dialog
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-        className="lg:hidden"
-      >
-        <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-(--grey) p-6 sm:max-w-sm sm:ring-1 sm:ring-(--white)">
-          <div className="flex items-center justify-between">
-            <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-              className="h-8"
-            />
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-white"
-            >
-              <XMarkIcon className="size-6" />
+      {/* Mobile Menu (unchanged) */}
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+        <div className="fixed inset-0 bg-black/40" />
+        <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-sm bg-(--grey) p-6">
+          <div className="flex justify-end">
+            <button onClick={() => setMobileMenuOpen(false)}>
+              <XMarkIcon className="h-6 w-6 text-(--white)" />
             </button>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 space-y-6">
             <Disclosure>
-              <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 px-3 text-lg font-semibold text-white hover:bg-(--less-white) hover:text-(--grey)">
+              <DisclosureButton className="flex w-full items-center justify-between text-lg font-semibold text-(--white)">
                 Product
-                <ChevronDownIcon className="size-5" />
+                <ChevronDownIcon className="h-5 w-5" />
               </DisclosureButton>
 
-              <DisclosurePanel className="mt-2 space-y-2">
-                {[...products, ...callsToAction].map((item) => (
+              <DisclosurePanel className="mt-3 space-y-2">
+                {products.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block rounded-lg py-2 px-6 text-lg font-semibold text-white hover:bg-(--less-white) hover:text-(--grey)"
+                    className="block rounded-lg px-4 py-2 text-(--white) hover:bg-(--less-white) hover:text-(--grey)"
                   >
                     {item.name}
                   </a>
@@ -217,22 +133,11 @@ const Navbar = () => {
               </DisclosurePanel>
             </Disclosure>
 
-            {["Features", "Marketplace", "Company"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="block rounded-lg px-3 py-2 text-lg font-semibold text-white hover:bg-(--less-white) hover:text-(--grey)"
-              >
+            {links.map((item) => (
+              <a key={item} href="#" className="block text-lg font-semibold text-(--white)">
                 {item}
               </a>
             ))}
-
-            <a
-              href="#"
-              className="mt-4 block rounded-lg px-3 py-2 text-lg font-semibold text-white hover:bg-(--less-white) hover:text-(--grey)"
-            >
-              Log in
-            </a>
           </div>
         </DialogPanel>
       </Dialog>
