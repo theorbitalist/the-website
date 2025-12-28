@@ -4,42 +4,42 @@ const callouts = [
   {
     name: 'Desk and Office',
     description: 'Work from home accessories',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-01.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'Self-Improvement',
     description: 'Journals and note-taking',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-02.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Delta_IV_launch_2013-08-28.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
@@ -60,13 +60,13 @@ const Blog = () => {
                   src={callout.imageSrc}
                   className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
                 />
-                <h3 className="mt-6 text-sm">
+                <h3 className="mt-6 text-md">
                   <a href={callout.href}>
                     <span className="absolute inset-0" />
                     {callout.name}
                   </a>
                 </h3>
-                <p className="text-base font-semibold">{callout.description}</p>
+                <p className="text-xl font-semibold">{callout.description}</p>
               </div>
             ))}
           </div>

@@ -1,4 +1,5 @@
 import Blog from "./components/blog/Blog"
+import Details from "./components/details/Details"
 import Hero from "./components/hero/Hero"
 import Navbar from "./components/navbar/Navbar"
 
@@ -10,6 +11,7 @@ function App() {
     </div>
     <Hero/>
     <Blog/>
+    <Details/>
     </>
   )
 }
