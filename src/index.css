@@ -18,11 +18,6 @@
   --nixie: "Nixie One", system-ui;
 }
 
-body{
-  background-color: var(--grey);
-  color: var(--white);
-}
-
 .container{
   width: 85%;
   margin: 5px auto;
