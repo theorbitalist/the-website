@@ -1,0 +1,8 @@
+.navbar-logo-text{
+    font-family: var(--bebas);
+    font-size: 40px;
+}
+
+.navbar-link-text{
+    font-family: var(--quicksand);
+}
