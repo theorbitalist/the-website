@@ -122,7 +122,22 @@ export default function Header() {
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
-          <span className='text-(--less-white) border border-(--less-white) px-3 py-1 rounded-full text-sm'>Earth & Space Intelligence for Climate, <span className='text-(--red) ml-2'>CSR & ESG Decisions</span></span>
+         <span className="
+  inline-flex items-center
+  whitespace-nowrap
+  text-[color:var(--less-white)]
+  border border-[color:var(--less-white)]
+  px-3 py-1
+  rounded-full
+  text-xs sm:text-sm
+">
+  Earth & Space Intelligence for Climate,
+  <span className="text-[color:var(--red)] ml-1 font-medium">
+    CSR & ESG Decisions
+  </span>
+</span>
+
+
           <h1 className="text-4xl font-semibold tracking-tight text-[var(--white)] sm:text-5xl lg:text-6xl mt-5">
             Turning Earth & Space Data into Intelligence
           </h1>
