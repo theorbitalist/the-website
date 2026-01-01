@@ -6,15 +6,15 @@ const links = [
 ]
 
 const stats = [
-  { name: 'Offices worldwide', value: '12' },
-  { name: 'Full-time colleagues', value: '300+' },
-  { name: 'Hours per week', value: '40' },
-  { name: 'Paid time off', value: 'Unlimited' },
+  { name: 'Global average temperature rise', value: '+1.1°C' },
+  { name: 'Global forest and land-use change', value: '100+ M h/yr' },
+  { name: 'Living under risk conditions', value: '3B+ people' },
+  { name: 'ESG reliant on environmental data', value: '70%+' },
 ]
 
 export default function Global() {
   return (
-    <section className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <section className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32" id="global">
       {/* Background image */}
       <img
         alt=""
@@ -25,24 +25,23 @@ export default function Global() {
       {/* Dark overlay */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gray-900/70"
+        className="absolute inset-0 -z-10 bg-(--grey) opacity-50"
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Work with us
+            Global Climate & Sustainability Signals
           </h2>
 
           <p className="mt-6 text-base text-gray-300 sm:text-lg">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-            cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+            We track large-scale environmental and climate indicators using Earth observation, helping organizations understand the scale, direction, and urgency of global sustainability challenges.
           </p>
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           {/* Links */}
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-sm font-medium text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          {/* <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-sm font-medium text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a
                 key={link.name}
@@ -52,7 +51,7 @@ export default function Global() {
                 {link.name} <span aria-hidden="true">→</span>
               </a>
             ))}
-          </div>
+          </div> */}
 
           {/* Stats */}
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">

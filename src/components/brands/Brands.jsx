@@ -2,7 +2,7 @@ export default function Brands() {
   return (
     <section className="bg-[var(--grey)] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-sm font-medium text-[var(--less-white)]">
+        <h2 className="text-center text-xl font-medium text-[var(--less-white)]">
           Trusted by the world’s most innovative teams
         </h2>
 

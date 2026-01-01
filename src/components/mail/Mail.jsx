@@ -2,18 +2,18 @@ import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 
 export default function Mail() {
   return (
-    <section className="relative isolate overflow-hidden bg-[var(--grey)] py-16 sm:py-24 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-[var(--grey)] py-16 sm:py-24 lg:py-32" id='mail'>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           
           {/* Left */}
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-semibold tracking-tight text-[var(--white)] sm:text-4xl">
-              Subscribe to our newsletter
+              Stay in Touch
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-[var(--less-white)] sm:text-lg">
-              Thoughtful insights on space, earth intelligence, and emerging technology — delivered weekly.
+              If you’re interested in climate intelligence, CSR or ESG insights, or potential collaborations, leave your email and we’ll reach out when relevant.
             </p>
 
             <div className="mt-6 flex max-w-md gap-x-4">
@@ -35,7 +35,7 @@ export default function Mail() {
                 type="submit"
                 className="flex-none rounded-md bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500"
               >
-                Subscribe
+                Notify me
               </button>
             </div>
           </div>
@@ -47,12 +47,12 @@ export default function Mail() {
                 <CalendarDaysIcon className="size-6 text-[var(--white)]" />
               </div>
 
-              <dt className="mt-4 text-sm font-semibold text-[var(--white)]">
-                Weekly articles
+              <dt className="mt-4 text-xl font-semibold text-[var(--white)]">
+                Reports & Case Studies
               </dt>
 
               <dd className="mt-2 text-sm leading-relaxed text-gray-400">
-                Curated deep-dives on space systems, earth intelligence, and frontier innovation.
+                Early access to public reports, case studies, and future intelligence products.
               </dd>
             </div>
 
@@ -61,12 +61,12 @@ export default function Mail() {
                 <HandRaisedIcon className="size-6 text-[var(--white)]" />
               </div>
 
-              <dt className="mt-4 text-sm font-semibold text-[var(--white)]">
-                No spam
+              <dt className="mt-4 text-xl font-semibold text-[var(--white)]">
+                Trust Line
               </dt>
 
               <dd className="mt-2 text-sm leading-relaxed text-gray-400">
-                Zero noise. Only meaningful insights worth your time.
+                No mailing lists. We’ll contact you only when there’s something relevant.
               </dd>
             </div>
           </dl>

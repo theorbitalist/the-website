@@ -3,19 +3,20 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from '../../assets/logo_astronaut_no_bg.png'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'About', href: '#about' },
+  { name: 'Features', href: '#features' },
+  { name: 'Global', href: '#global' },
+  { name: 'Connect', href: '#mail' },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-[var(--grey)]">
+    <div className="bg-[var(--grey)]" >
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -23,12 +24,12 @@ export default function Header() {
         >
           {/* Logo */}
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=white"
-                className="h-8 w-auto"
+                src={logo}
+                className="h-10 w-auto"
               />
             </a>
           </div>
@@ -61,10 +62,11 @@ export default function Header() {
           {/* Desktop login */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="#"
+              target='_blank'
+              href="https://www.linkedin.com/in/the-orbitalist-048b263a1/"
               className="text-sm font-medium text-[var(--white)] hover:text-[var(--less-white)] transition"
             >
-              Log in →
+              LinkedIn →
             </a>
           </div>
         </nav>
@@ -104,10 +106,11 @@ export default function Header() {
 
                 <div className="py-6">
                   <a
-                    href="#"
+                    target='_blank'
+                    href="https://www.linkedin.com/in/the-orbitalist-048b263a1/"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-medium text-[var(--white)] hover:bg-white/5 transition"
                   >
-                    Log in
+                    LinkedIn
                   </a>
                 </div>
               </div>
@@ -119,24 +122,25 @@ export default function Header() {
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
-          <h1 className="text-4xl font-semibold tracking-tight text-[var(--white)] sm:text-5xl lg:text-6xl">
-            Data to enrich your online business
+          <span className='text-(--less-white) border border-(--less-white) px-3 py-1 rounded-full text-sm'>Earth & Space Intelligence for Climate, <span className='text-(--red) ml-2'>CSR & ESG Decisions</span></span>
+          <h1 className="text-4xl font-semibold tracking-tight text-[var(--white)] sm:text-5xl lg:text-6xl mt-5">
+            Turning Earth & Space Data into Intelligence
           </h1>
 
           <p className="mt-6 text-base text-[var(--less-white)] sm:text-lg">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+            Built for credibility. Designed for impact. Powered by data from space.
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="#"
+              href="#mail"
               className="rounded-md bg-[var(--red)] px-4 py-2.5 text-sm font-medium text-[var(--white)] shadow hover:bg-[#b01010] transition"
             >
               Get started
             </a>
 
             <a
-              href="#"
+              href="#about"
               className="text-sm font-medium text-[var(--white)] hover:text-[var(--less-white)] transition"
             >
               Learn more →

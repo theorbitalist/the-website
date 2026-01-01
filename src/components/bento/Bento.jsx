@@ -1,14 +1,19 @@
+import img1 from '../../assets/1.png'
+import img2 from '../../assets/2.png'
+import img3 from '../../assets/3.png'
+import img4 from '../../assets/4.png'
+
 export default function Bento() {
   return (
-    <section className="relative bg-[var(--grey)] py-24 sm:py-32 overflow-hidden">
+    <section className="relative bg-[var(--grey)] py-24 sm:py-32 overflow-hidden" id='features'>
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         {/* ===== Heading ===== */}
         <h2 className="text-center text-xs font-semibold uppercase tracking-widest text-[var(--red)]">
-          Deploy faster
+          REPORTS & CASE STUDIES
         </h2>
 
         <p className="mx-auto mt-3 max-w-lg text-center text-3xl font-semibold tracking-tight text-[var(--white)] sm:text-4xl">
-          Everything you need to deploy your app
+          Intelligence built for credibility, not clicks
         </p>
 
         {/* ===== Bento Grid ===== */}
@@ -18,19 +23,19 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-[var(--grey)]/80 lg:rounded-l-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] border border-white/10">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10">
-                <p className="text-sm font-semibold text-[var(--white)] max-lg:text-center">
-                  Mobile friendly
+                <p className="text-xl font-semibold text-[var(--white)] max-lg:text-center">
+                  Question-Driven Analysis
                 </p>
                 <p className="mt-2 text-base text-[var(--less-white)] max-lg:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  Each case study begins with a real environmental or sustainability question, not a dataset.
                 </p>
               </div>
 
               <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-white/10 bg-[var(--grey)] outline outline-white/10">
+                <div>
                   <img
                     alt=""
-                    src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png"
+                    src={img1}
                     className="size-full object-cover object-top"
                   />
                 </div>
@@ -43,18 +48,18 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-[var(--grey)]/80 max-lg:rounded-t-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-white/10">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="text-sm font-semibold text-[var(--white)] max-lg:text-center">
-                  Performance
+                <p className="text-xl font-semibold text-[var(--white)] max-lg:text-center">
+                  Data from Space
                 </p>
                 <p className="mt-2 text-base text-[var(--less-white)] max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                  We use satellite imagery and climate data from space.
                 </p>
               </div>
 
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10">
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-performance.png"
+                  src={img2}
                   className="w-full max-lg:max-w-xs"
                 />
               </div>
@@ -66,19 +71,19 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-[var(--grey)]/80" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] border border-white/10">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="text-sm font-semibold text-[var(--white)] max-lg:text-center">
-                  Security
+                <p className="text-xl font-semibold text-[var(--white)] max-lg:text-center">
+                  No black boxes
                 </p>
                 <p className="mt-2 text-base text-[var(--less-white)] max-lg:text-center">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                  Every report clearly documents data sources, analytical steps, and limitations.
                 </p>
               </div>
 
-              <div className="@container flex flex-1 items-center justify-center max-lg:py-6">
+              <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10">
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-security.png"
-                  className="h-[min(152px,40cqw)] object-cover"
+                  src={img3}
+                  className="w-full max-lg:max-w-xs"
                 />
               </div>
             </div>
@@ -89,25 +94,21 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-[var(--grey)]/80 max-lg:rounded-b-4xl lg:rounded-r-4xl" />
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] border border-white/10">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10">
-                <p className="text-sm font-semibold text-[var(--white)] max-lg:text-center">
-                  Powerful APIs
+                <p className="text-xl font-semibold text-[var(--white)] max-lg:text-center">
+                  Decision-Ready Insights
                 </p>
                 <p className="mt-2 text-base text-[var(--less-white)] max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                  Findings are presented as concise insights, visuals, and implications, making them usable for sustainability planning.
                 </p>
               </div>
 
-              <div className="relative min-h-120 w-full grow">
-                <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-[var(--grey)]/70 outline outline-white/10">
-                  <div className="flex bg-[var(--grey)] outline outline-white/5">
-                    <div className="-mb-px flex text-sm font-medium text-[var(--less-white)]">
-                      <div className="border-r border-b border-white/10 bg-white/5 px-4 py-2 text-[var(--white)]">
-                        NotificationSetting.jsx
-                      </div>
-                      <div className="border-r border-white/5 px-4 py-2">App.jsx</div>
-                    </div>
-                  </div>
-                  <div className="px-6 pt-6 pb-14" />
+              <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                <div>
+                  <img
+                    alt=""
+                    src={img4}
+                    className="size-full object-cover object-top"
+                  />
                 </div>
               </div>
             </div>

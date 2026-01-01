@@ -16,8 +16,8 @@ function App() {
     <Features/>
     <Bento/>
     <Global/>
-    <Brands/>
-    <Testimonial/>
+    {/* <Brands/> */}
+    {/* <Testimonial/> */}
     <Mail/>
     {/* <Contact/> */}
     <Footer/>
