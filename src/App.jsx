@@ -26,7 +26,7 @@ function App() {
 
         <meta property="og:title" content="Earth & Space Intelligence | The Orbitalist" />
         <meta property="og:description" content="The Orbitalist provides Earth and space intelligence through climate and geospatial analysis." />
-        <meta property="og:image" content="https://www.theorbitalist.space/assets/2-CNrwoDjv.png" />
+        <meta property="og:image" content="https://www.theorbitalist.space/assets/logo_astronaut-D1E5IewJ.png" />
         <meta property="og:url" content="https://www.theorbitalist.space/" />
         <meta property="og:type" content="website" />
 
